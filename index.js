@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/public'));
 app.get("/",async(req, res) => {
     try {
         // const response = await axios.get(base_url + '/books');
-        res.render("member", );
+        res.render("home", );
     } catch (err){
         console.error(err);
         res.status(500).send('Error');
