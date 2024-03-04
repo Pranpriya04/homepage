@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แก้ไขข้อมูลส่วนตัว</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .profile-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .profile-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-form {
+            margin-bottom: 20px;
+        }
+
+        .profile-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .profile-form input {
+            width: calc(100% - 22px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .profile-form input[type="submit"] {
+            background-color: #21db00;
+            color: white;
+            cursor: pointer;
+        }
+
+        .profile-form input[type="submit"]:hover {
+            background-color: #73f165;
+        }
+        .profile-form label {
+        display: inline-block;
+        width: 100px; /* กำหนดความกว้างของ label */
+        margin-bottom: 5px;
+    }
+
+    .profile-form input,
+    .profile-form select,
+    .profile-form textarea {
+        width: calc(100% - 120px); /* กำหนดความกว้างของ input, select, textarea */
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .profile-form textarea {
+        width: calc(100% - 120px); /* กำหนดความกว้างของ textarea */
+    }
+
+    .profile-form input[type="submit"] {
+        width: auto; /* กำหนดความกว้างของ input submit ให้ขยายตามข้อความ */
+        padding: 5px 20px;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <div id="li-1"><li><a class="active" href="home.ejs">Home</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ประวัติการจอง</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ข้อมูลส่วนตัว</a></li></div>
+    </ul>
+    <br><br><br>
+    <center>
+    <div class="profile-container">
+        <h2>แก้ไขข้อมูลส่วนตัว</h2>
+        <form class="profile-form" action="#" method="POST">
+            <label for="username">ชื่อผู้ใช้:</label>
+            <input type="text" id="username" name="username" value="ชื่อผู้ใช้ นามสกุล">
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" value="example@example.com">
+            <label for="gender">เพศ:</label>
+            <select id="gender" name="gender">
+                <option value="male">ชาย</option>
+                <option value="female">หญิง</option>
+            </select>
+            <label for="phone">เบอร์โทร:</label>
+            <input type="text" id="phone" name="phone" value="080-123-4567">
+            <label for="credit_card">บัตรเครดิต:</label>
+            <input type="text" id="credit_card" name="credit_card" value="**** **** **** 1234">
+            <label for="address">ที่อยู่:</label>
+            <textarea id="address" name="address" rows="4">เลขที่ 123 ถนนใหญ่ ตำบลใหญ่ อำเภอใหญ่ จังหวัดใหญ่ 12345</textarea>
+            <input type="submit" value="บันทึก">
+        </form>
+    </div>
+</center>
+</body>
+</html>

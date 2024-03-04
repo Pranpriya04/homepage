@@ -4,68 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .navbar {
-            
-  width: 100%;
-  background-color: #000000;
-  box-shadow: -1px 5px 17px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: -1px 5px 17px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 5px 17px 0px rgba(0,0,0,0.75);
-  overflow: auto;
-}
-
-/* Navbar links */
-.navbar a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: #5f5c5c;
-}
-
-/* Current/active navbar link */
-.active {
-  background-color: #2053d3;
-}
-
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
-.h{
-    width: 500px;
-    height: 50px;
-    margin-top: 60px;
-}
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="navbar">
-        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> หน้าหลัก</a>
-        <a href="#"><i class="fa fa-fw fa-search"></i> ข้อมูลสนาม</a>
-        <a href="#"><i class="fa fa-fw fa-envelope"></i> ข้อมูลการจองสนาม</a>
-        <a href="#"><i class="fa fa-fw fa-user"></i> โปรไฟล์</a>
-      </div>
-      <center>
-      <div class="h">
-        <h2>ระบบจัดการการจองสนามกีฬาออนไลน์</h2>
-      </div>
-
-      <div class="box">
-
-      </div>
-    </center>
+  <ul>
+    <div id="li-1"><li><a class="active" href="home.ejs">Home</a></li></div>
+    <div id="li-2"><li><a href="login.ejs">ประวัติการจอง</a></li></div>
+    <div id="li-2"><li><a href="login.ejs">ข้อมูลส่วนตัว</a></li></div>
+</ul>
+<br><center>
+  <div class="receipt-container">
+    <h2>จองสนามกีฬา</h2>
+    <div>
+      <table>
+        <tr>
+            <th>รายการ</th>
+            <th>ข้อมูล</th>
+        </tr>
+        <tr>
+            <td><strong>รหัสสนาม:</strong></td>
+            <td>ABC123</td>
+        </tr>
+        <tr>
+            <td><strong>ชื่อสนาม:</strong></td>
+            <td>สนามฟุตบอล</td>
+        </tr>
+        <tr>
+            <td><strong>ขนาดสนาม:</strong></td>
+            <td>80x40 เมตร</td>
+        </tr>
+        <tr>
+            <td><strong>เวลาที่ลงจอง:</strong></td>
+            <td>2024-03-07 08:00</td>
+        </tr>
+        <tr>
+            <td><strong>ชื่อลูกค้า:</strong></td>
+            <td>John Doe</td>
+        </tr>
+        <tr>
+            <td><strong>บัตรเครดิตลูกค้า:</strong></td>
+            <td>1234 5678 9012 3456</td>
+        </tr>
+        <tr>
+            <td><strong>Email:</strong></td>
+            <td>johndoe@example.com</td>
+        </tr>
+        <tr>
+            <td><strong>เบอร์โทร:</strong></td>
+            <td>081-234-5678</td>
+        </tr>
+    </table>
+    </div>
+    <button>ยืนยันการจอง</button>
+</div>
+</center>
 </body>
 </html>

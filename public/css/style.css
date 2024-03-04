@@ -1,3 +1,200 @@
-.container{
-    border: 1px solid black;
+body{
+    
+    margin: 0%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: -1px 1px 25px 0px rgba(119,114,114,0.75);
+-webkit-box-shadow: -1px 1px 25px 0px rgba(119,114,114,0.75);
+-moz-box-shadow: -1px 1px 25px 0px rgba(119,114,114,0.75);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(56, 57, 59);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #3a3a3a;
+    color: floralwhite;
+  }
+  .type{
+    margin-top: 80px;
+    
+    width: 800px;
+    height: 120px;
+  }
+  .type .htype{
+    
+    width: 600px;
+    height: 50px;
+  }
+  .type .typeobj{
+    margin-top: 20px;
+    width: 790px;
+    height: 45px;
+  }
+  
+  #u{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    list-style-type: none;
+    width: 120px;
+    height: 15px;
+    border-radius: 10px;
+    
+  }
+  .typeobj {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.typeobj > div {
+    padding: 10px;
+    background-color: rgb(58, 55, 55);
+    border: 1px solid #ccc; /* กำหนดขอบ */
+    border-radius: 5px; /* กำหนดขอบเส้นโค้ง */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+    transition: background-color 0.3s, transform 0.3s; /* เพิ่มการเปลี่ยนสีพื้นหลังและขนาดเล็ก ๆ เมื่อ hover */
+    justify-content: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลางตามแนวนอน */
+        align-items: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลางตามแนวดิ่ง */
+}
+
+.typeobj > div:hover {
+    background-color: #f4c10a; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(0.95); /* ลดขนาดเล็กลงเมื่อ hover */
+    
+}
+.tables{
+    width: 1300px;
+    margin-top: 40px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tr th{
+    background-color: rgb(58, 55, 55);
+    color: floralwhite;
+  }
+  
+  tr:hover {background-color: rgb(168, 157, 157);
+color: floralwhite;}
+.button {
+    background-color: #00bb16;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button-d {
+    background-color: #b80000;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button-e{
+    background-color: #ffa718;
+    color: rgb(248, 178, 0);
+    border: none;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button a{
+    text-decoration: none;
+    color: white;
+}
+.button-d a{
+    text-decoration: none;
+    color: white;
+}
+.button-e a{
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover {
+    background-color: #271f02;
+    color: black;
+}
+.button-d:hover {
+    background-color: #271f02;
+    color: black;
+}
+.button-e:hover {
+    background-color: #271f02;
+    color: black;
+}
+.receipt-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: 50px;
+}
+
+.receipt-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.receipt-container div {
+    margin-bottom: 10px;
+}
+
+.receipt-container button {
+    background-color: #0db701;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+.receipt-container button:hover {
+    background-color: #60e21f;
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลส่วนตัว</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+.profile-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .profile-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .profile-table th,
+        .profile-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            width: 100px;
+        }
+
+        .edit-profile-button {
+            text-align: center;
+        }
+
+        .edit-profile-button a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-profile-button a:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <div id="li-1"><li><a class="active" href="home.ejs">Home</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ประวัติการจอง</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ข้อมูลส่วนตัว</a></li></div>
+    </ul>
+    <br><br><br>
+    <center>
+        <div class="profile-container">
+            <h2>ข้อมูลส่วนตัว</h2>
+            <table class="profile-table">
+                <tr>
+                    <th><i class="fas fa-id-card"></i> รหัสสมาชิก:</th>
+                    <td>123456</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-user"></i> ชื่อผู้ใช้:</th>
+                    <td>ชื่อผู้ใช้ นามสกุล</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-envelope"></i> อีเมล:</th>
+                    <td>example@example.com</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-venus-mars"></i> เพศ:</th>
+                    <td>ชาย</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-phone-alt"></i> เบอร์โทร:</th>
+                    <td>080-123-4567</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-credit-card"></i> บัตรเครดิต:</th>
+                    <td>**** **** **** 1234</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-map-marker-alt"></i> ที่อยู่:</th>
+                    <td>เลขที่ 123 ถนนใหญ่ ตำบลใหญ่ อำเภอใหญ่ จังหวัดใหญ่ 12345</td>
+                </tr>
+            </table>
+            <div class="edit-profile-button">
+                <a href="#"><i class="fas fa-edit"></i> แก้ไขโปรไฟล์</a>
+            </div>
+        </div>
+</center>
+</body>
+</html>
