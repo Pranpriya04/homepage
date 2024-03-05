@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin-top: 100px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <div id="li-1"><li><a class="active" href="home.ejs">Home</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ข้อมูลสนาม</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ข้อมูลการขาย</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ข้อมูลลูกค้า</a></li></div>
+        <div id="li-2"><li><a href="login.ejs">ออกจากระบบ</a></li></div>
+    </ul>
+    <center>
+       
+        <div class="form-container">
+            <h2>เพิ่มข้อมูลสนามกีฬา</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">ชื่อสนาม:</label>
+                    <input type="text" id="name" name="name" placeholder="ชื่อสนาม">
+                </div>
+                <div class="form-group">
+                    <label for="type">ประเภทสนาม:</label>
+                    <select id="type" name="type">
+                        <option value="basketball">สนามบาสเกตบอล</option>
+                        <option value="football">สนามฟุตบอล</option>
+                        <option value="futsal">สนามฟุตซอล</option>
+                        <option value="badminton">สนามแบตมินตัน</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">ราคา:</label>
+                    <input type="text" id="price" name="price" placeholder="ราคา">
+                </div>
+                <div class="form-group">
+                    <label for="size">ขนาด:</label>
+                    <input type="text" id="size" name="size" placeholder="ขนาด">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ยืนยัน">
+                </div>
+            </form>
+        </div>
+    </center>
+    
+    
+</body>
+</html>
