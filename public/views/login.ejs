@@ -56,19 +56,19 @@
             justify-content: space-evenly;
         }
     </style>
-
+   
 </head>
 <body>
     <div class="login-container">
         <h2>เข้าสู่ระบบ</h2>
-        <form action="#" method="POST">
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
+        <form action="login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Login">
             <div class="n">
-                <a href="member.ejs">สมัครสมาชิก</a>
+                <a href="member">สมัครสมาชิก</a>
                 
-                <a href="login2.ejs">ลืมรหัสผ่าน</a>
+                <a href="forgetassword">ลืมรหัสผ่าน</a>
             </div>
         </form>
     </div>
