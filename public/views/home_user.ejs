@@ -11,7 +11,7 @@
         <div id="li-1"><li><a class="active" href="home_user">สนามกีฬา</a></li></div>
         <div id="li-2"><li><a href="history">ประวัติการจอง</a></li></div>
     <div id="li-2"><li><a href="profile">ข้อมูลส่วนตัว</a></li></div>
-    <div id="li-2"><li><a href="home">ออกจากระบบ</a></li></div>
+    <div id="li-2"><li><a href="logout">ออกจากระบบ</a></li></div>
     </ul>
     <center>
         <div class="type">
@@ -36,27 +36,20 @@
                   <th>จอง</th>
                 </tr>
                 <% 
-                for(let i=0; i<stadium.length;i++)
-                {
-
-                %>
+                for(let i=0; i<stadium.length;i++) { %>
                 <tr>
                   <td><%= stadium[i].StadiumID %></td>
                   <td><%= stadium[i].StadiumName %></td>
                   <td><%= stadium[i].type_stadium.TypeName %></td>
                   <td><%= stadium[i].Size %></td>   
                   <td><%= stadium[i].Price %></td>
-                  <td><button class="button"><a href="sale">จอง</a></button></td>
+                  <td><a class="button" href="sale/<%= stadium[i].StadiumID %>">จอง</a></td>
                 </tr>
                 <% } %>
               </table>
         </div>
     </center>
-    
 
-   
-     <%   localStorage.setItem("role",JSON.stringify(role) %>)
 
-    
 </body>
 </html>

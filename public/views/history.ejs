@@ -29,16 +29,20 @@
             </tr>
         </thead>
         <tbody>
+          <% history.map((item)=>{
+           %>
             <tr>
-                <td>001</td>
-                <td>สนามฟุตบอล</td>
-                <td>100x50 เมตร</td>
-                <td>2024-03-05 10:00</td>
-                <td>John Doe</td>
-                <td>1234 5678 9012 3456</td>
-                <td>john.doe@example.com</td>
-                <td>1234567890</td>
+                <td><%= item.stadium?.StadiumID %></td>
+                <td><%= item.stadium?.StadiumName %></td>
+                <td><%= item.stadium?.Size %></td>
+                <td><%= item.Time %></td>
+                <td><%= user?.UserName %></td>
+                <td><%= user?.Credit %></td>
+                <td><%= user?.Email %></td>
+                <td><%= user?.Tel %></td>
             </tr>
+
+          <% }) %>
             <!-- เพิ่มแถวข้อมูลอื่น ๆ ตามต้องการ -->
         </tbody>
     </table>

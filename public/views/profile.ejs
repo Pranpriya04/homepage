@@ -68,35 +68,35 @@
             <table class="profile-table">
                 <tr>
                     <th><i class="fas fa-id-card"></i> รหัสสมาชิก:</th>
-                    <td>123456</td>
+                    <td><%= user.UserID  %></td>
                 </tr>
                 <tr>
                     <th><i class="fas fa-user"></i> ชื่อผู้ใช้:</th>
-                    <td>ชื่อผู้ใช้ นามสกุล</td>
+                    <td><%= user.UserName %></td>
                 </tr>
                 <tr>
                     <th><i class="fas fa-envelope"></i> อีเมล:</th>
-                    <td>example@example.com</td>
+                    <td><%= user.Email %></td>
                 </tr>
                 <tr>
                     <th><i class="fas fa-venus-mars"></i> เพศ:</th>
-                    <td>ชาย</td>
+                    <td><%= user.Gender %></td>
                 </tr>
                 <tr>
                     <th><i class="fas fa-phone-alt"></i> เบอร์โทร:</th>
-                    <td>080-123-4567</td>
+                    <td><%= user.Tel %></td>
                 </tr>
                 <tr>
                     <th><i class="fas fa-credit-card"></i> บัตรเครดิต:</th>
-                    <td>**** **** **** 1234</td>
+                    <td><%= user.Credit %></td>
                 </tr>
                 <tr>
                     <th><i class="fas fa-map-marker-alt"></i> ที่อยู่:</th>
-                    <td>เลขที่ 123 ถนนใหญ่ ตำบลใหญ่ อำเภอใหญ่ จังหวัดใหญ่ 12345</td>
+                    <td><%= user.Address %></td>
                 </tr>
             </table>
             <div class="edit-profile-button">
-                <a href="editpro.ejs"><i class="fas fa-edit"></i> แก้ไขโปรไฟล์</a>
+                <a href="editprofile"><i class="fas fa-edit"></i> แก้ไขโปรไฟล์</a>
             </div>
         </div>
 </center>

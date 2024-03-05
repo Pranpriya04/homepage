@@ -17,10 +17,10 @@
                 <h2>ประเภทสนามกีฬา</h2>
             </div>
             <div class="typeobj">
-                <div id="tname"><a id="u" href="">สนามบาสเกตบอล</a></div>
-                <div id="tname"><a id="u" href="">สนามฟุตบอล</a></div>
-                <div id="tname"><a id="u" href="">สนามฟุตซอล</a></div>
-                <div id="tname"><a id="u" href="">สนามแบตมินตัน</a></div>
+                <div id="tname"><a id="u" href="basketball">สนามบาสเกตบอล</a></div>
+                <div id="tname"><a id="u" href="football">สนามฟุตบอล</a></div>
+                <div id="tname"><a id="u" href="futsal">สนามฟุตซอล</a></div>
+                <div id="tname"><a id="u" href="Bat">สนามแบตมินตัน</a></div>
             </div>
         </div>
         <div class="tables">
@@ -33,14 +33,17 @@
                   <th>ราคา/ชั่วโมง</th>
                   <th>จอง</th>
                 </tr>
+                <% 
+                for(let i=0; i<stadium.length;i++) { %>
                 <tr>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                  <td><button class="button"><a href="sale.ejs">จอง</a></button></td>
+                  <td><%= stadium[i].StadiumID %></td>
+                  <td><%= stadium[i].StadiumName %></td>
+                  <td><%= stadium[i].type_stadium.TypeName %></td>
+                  <td><%= stadium[i].Size %></td>   
+                  <td><%= stadium[i].Price %></td>
+                  <td><a class="button" href="login">จอง</a></td>
                 </tr>
+                <% } %>
               </table>
         </div>
     </center>
