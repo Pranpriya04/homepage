@@ -4,17 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
         
         .register-container {
             background-color: white;
@@ -22,7 +13,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 400px;
-        }
+            margin-top: 80px;       }
         
         .register-container h2 {
             text-align: center;
@@ -53,6 +44,11 @@
     </style>
 </head>
 <body>
+    <ul>
+        <div id="li-1"><li><a class="active" href="home">Home</a></li></div>
+        <div id="li-2"><li><a href="login">เข้าสู่ระบบ</a></li></div>
+    </ul>
+    <center>
     <div class="register-container">
         <h2>สมัครสมาชิก</h2>
         <form action="/member" method="POST">
@@ -60,16 +56,17 @@
             <input type="email" name="Email" placeholder="อีเมล" required>
 
             <select name="Gender" required>
-                <option value="1">ชาย</option>
-                <option value="2">หญิง</option>
+                <option value="ชาย">ชาย</option>
+                <option value="หญิง">หญิง</option>
             </select>
-            <input type="tel" name="Tel" placeholder="เบอร์โทร" required>
-            <input type="text" name="Credit" placeholder="บัตรเครดิต" required>
+            <input type="tel" name="Tel" placeholder="เบอร์โทร" required maxlength="10">
+            <input type="text" name="Credit" placeholder="บัตรเครดิต" required maxlength="16">
             <textarea name="Address" rows="4" placeholder="ที่อยู่" required></textarea><br>
             <input type="password" name="UserPassword" placeholder="รหัสผ่าน" required>
             <input type="password" name="nPassword" placeholder="กรอกรหัสผ่านอีกครั้ง" required>
             <input type="submit" value="สมัคร">
         </form>
     </div>
+</center>
 </body>
 </html>

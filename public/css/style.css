@@ -198,3 +198,156 @@ color: floralwhite;}
 .receipt-container button:hover {
     background-color: #60e21f;
 }
+.center-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.login-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-top: 150px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container input[type="submit"] {
+  background-color: rgb(58, 55, 55);
+  color: white;
+  cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: rgb(124, 122, 122);
+}
+.n{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.profile-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-form {
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.profile-form input {
+    width: calc(100% - 22px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-form input[type="submit"] {
+    background-color: #21db00;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-form input[type="submit"]:hover {
+    background-color: #73f165;
+}
+.profile-form label {
+display: inline-block;
+width: 100px; /* กำหนดความกว้างของ label */
+margin-bottom: 5px;
+}
+
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+width: calc(100% - 120px); /* กำหนดความกว้างของ input, select, textarea */
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+
+.profile-form textarea {
+width: calc(100% - 120px); /* กำหนดความกว้างของ textarea */
+}
+
+.profile-form input[type="submit"] {
+width: auto; /* กำหนดความกว้างของ input submit ให้ขยายตามข้อความ */
+padding: 5px 20px;
+}
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-top: 100px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #0056b3;
+}

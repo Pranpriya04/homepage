@@ -6,71 +6,6 @@
     <title>แก้ไขข้อมูลส่วนตัว</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .profile-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 400px;
-        }
-
-        .profile-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .profile-form {
-            margin-bottom: 20px;
-        }
-
-        .profile-form label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .profile-form input {
-            width: calc(100% - 22px);
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .profile-form input[type="submit"] {
-            background-color: #21db00;
-            color: white;
-            cursor: pointer;
-        }
-
-        .profile-form input[type="submit"]:hover {
-            background-color: #73f165;
-        }
-        .profile-form label {
-        display: inline-block;
-        width: 100px; /* กำหนดความกว้างของ label */
-        margin-bottom: 5px;
-    }
-
-    .profile-form input,
-    .profile-form select,
-    .profile-form textarea {
-        width: calc(100% - 120px); /* กำหนดความกว้างของ input, select, textarea */
-        padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-
-    .profile-form textarea {
-        width: calc(100% - 120px); /* กำหนดความกว้างของ textarea */
-    }
-
-    .profile-form input[type="submit"] {
-        width: auto; /* กำหนดความกว้างของ input submit ให้ขยายตามข้อความ */
-        padding: 5px 20px;
-    }
-    </style>
 </head>
 <body>
     <ul>
@@ -90,8 +25,8 @@
             <input type="email" id="email" name="Email" value="<%= user.Email %>" required>
             <label for="gender">เพศ:</label>
             <select id="gender" value="<%= user.Gender %>" name="Gender" required> 
-                <option value="1">ชาย</option>
-                <option value="2">หญิง</option>
+                <option value="ชาย">ชาย</option>
+                <option value="หญิง">หญิง</option>
             </select>
             <label for="phone">เบอร์โทร:</label>
             <input type="text" id="phone" name="Tel" value="<%= user.Tel %>" required>

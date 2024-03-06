@@ -92,7 +92,15 @@ app.get("/sale-admin",async(req,res)=>{
 
 })
 
+app.get("/datamem_admin",async(req,res)=>{
+  const response = await axios.get(base_url + "/users");
+  console.log(response);
+  res.render("datamem_admin", {
+    users: response.data,
+    role: 0,
+  });
 
+})
 
 app.get("/datamem_admin",(req,res)=>{
   res.render("datamem_admin")
@@ -331,6 +339,7 @@ app.get("/delstadium/:saleID", async (req, res) => {
   const response = await axios.delete(base_url + "/stadiums/" + req.params.saleID);
 res.redirect("/home_admin")
 });
+
 
 //-------------------------------------------------------------------------
 

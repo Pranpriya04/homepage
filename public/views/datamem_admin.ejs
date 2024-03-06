@@ -11,7 +11,7 @@
         <div id="li-1"><li><a class="active" href="home_admin">Home</a></li></div>
         <div id="li-2"><li><a href="home_admin">ข้อมูลสนาม</a></li></div>
         <div id="li-2"><li><a href="sale-admin">ข้อมูลการขาย</a></li></div>
-        <div id="li-2"><li><a href="datamem_admin">ข้อมูลลูกค้า</a></li></div>
+        <div id="li-2"><li><a href="datamem_admin">ข้อมูลสมาชิก</a></li></div>
         <div id="li-2"><li><a href="home">ออกจากระบบ</a></li></div>
     </ul>
     <center>
@@ -32,15 +32,17 @@
                   <th>ที่อยู่</th>
                   
                 </tr>
-                <tr>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                  <td>##</td>
-                </tr>
+                <%for(let i=0; i<users.length;i++) { %>
+                    <tr>
+                      <td><%= users[i].UserID%></td>
+                      <td><%= users[i].UserName%></td>
+                      <td><%= users[i].Email%></td>
+                      <td><%= users[i].Tel%></td>
+                      <td><%= users[i].Gender%></td>
+                      <td><%= users[i].Credit%></td>
+                      <td><%= users[i].Address%></td>
+                    </tr>
+                    <% } %>
                 
               </table>
         </div>
