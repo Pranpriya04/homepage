@@ -1,13 +1,13 @@
 {
-    "UserID": "",
-    "UserPassword": "",
-    "UserName": "",
-    "Gender": "",
-    "Email": "",
-    "Tel": "",
-    "Credit": "",
-    "Address": "",
+    "UserID": 1,
+    "UserPassword": "1",
+    "UserName": "admin",
+    "Gender": "หญิง",
+    "Email": "s6506021622027@email.kmutnb.ac.th",
+    "Tel": "092xxxxxx",
+    "Credit": "0000000",
+    "Address": "มจพ.",
     "createdAt": "2024-03-05T08:02:44.277Z",
-    "updatedAt": "2024-03-06T05:25:19.800Z",
-    "role": ""
+    "updatedAt": "2024-03-06T07:48:39.049Z",
+    "role": 1
 }

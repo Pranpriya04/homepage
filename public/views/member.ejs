@@ -55,16 +55,19 @@
 <body>
     <div class="register-container">
         <h2>สมัครสมาชิก</h2>
-        <form action="#" method="POST">
-            <input type="text" name="fullname" placeholder="ชื่อผู้ใช้ (รวมชื่อนามสกุล)">
-            <input type="email" name="email" placeholder="อีเมล">
-            <select name="gender">
-                <option value="male">ชาย</option>
-                <option value="female">หญิง</option>
+        <form action="/member" method="POST">
+            <input type="text" name="UserName" placeholder="ชื่อผู้ใช้ (รวมชื่อนามสกุล)" required>
+            <input type="email" name="Email" placeholder="อีเมล" required>
+
+            <select name="Gender" required>
+                <option value="1">ชาย</option>
+                <option value="2">หญิง</option>
             </select>
-            <input type="tel" name="phone" placeholder="เบอร์โทร">
-            <input type="text" name="creditcard" placeholder="บัตรเครดิต">
-            <textarea name="address" rows="4" placeholder="ที่อยู่"></textarea><br>
+            <input type="tel" name="Tel" placeholder="เบอร์โทร" required>
+            <input type="text" name="Credit" placeholder="บัตรเครดิต" required>
+            <textarea name="Address" rows="4" placeholder="ที่อยู่" required></textarea><br>
+            <input type="password" name="UserPassword" placeholder="รหัสผ่าน" required>
+            <input type="password" name="nPassword" placeholder="กรอกรหัสผ่านอีกครั้ง" required>
             <input type="submit" value="สมัคร">
         </form>
     </div>

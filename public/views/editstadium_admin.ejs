@@ -50,37 +50,38 @@
 </head>
 <body>
     <ul>
-        <div id="li-1"><li><a class="active" href="home.ejs">Home</a></li></div>
-        <div id="li-2"><li><a href="login.ejs">ข้อมูลสนาม</a></li></div>
-        <div id="li-2"><li><a href="login.ejs">ข้อมูลการขาย</a></li></div>
-        <div id="li-2"><li><a href="login.ejs">ข้อมูลลูกค้า</a></li></div>
-        <div id="li-2"><li><a href="login.ejs">ออกจากระบบ</a></li></div>
+        <div id="li-1"><li><a class="active" href="/home_admin">Home</a></li></div>
+        <div id="li-2"><li><a href="/home_admin">ข้อมูลสนาม</a></li></div>
+        <div id="li-2"><li><a href="/sale-admin">ข้อมูลการขาย</a></li></div>
+        <div id="li-2"><li><a href="/datamem_admin">ข้อมูลลูกค้า</a></li></div>
+        <div id="li-2"><li><a href="/logout">ออกจากระบบ</a></li></div>
     </ul>
     <center>
        
         <div class="form-container">
             <h2>แก้ไขข้อมูลสนามกีฬา</h2>
-            <form action="#" method="POST">
+            <form action="/editstadium_admin/<%= stadium.StadiumID%>" method="POST">
                 <div class="form-group">
                     <label for="name">ชื่อสนาม:</label>
-                    <input type="text" id="name" name="name" placeholder="ชื่อสนาม">
+                    <input type="text" id="name" name="StadiumName" value="<%= stadium.StadiumName %>" placeholder="ชื่อสนาม">
                 </div>
                 <div class="form-group">
                     <label for="type">ประเภทสนาม:</label>
-                    <select id="type" name="type">
-                        <option value="basketball">สนามบาสเกตบอล</option>
-                        <option value="football">สนามฟุตบอล</option>
-                        <option value="futsal">สนามฟุตซอล</option>
-                        <option value="badminton">สนามแบตมินตัน</option>
-                    </select>
+                    <select id="type" name="TypeID">
+                        <option value="1" <%= stadium.TypeID === 1 ? 'selected' : '' %>>สนามบาสเกตบอล</option>
+                        <option value="2" <%= stadium.TypeID === 2 ? 'selected' : '' %>>สนามฟุตบอล</option>
+                        <option value="3" <%= stadium.TypeID === 3 ? 'selected' : '' %>>สนามฟุตซอล</option>
+                        <option value="4" <%= stadium.TypeID === 4 ? 'selected' : '' %>>สนามแบตมินตัน</option>
+                      </select>
+                      
                 </div>
                 <div class="form-group">
                     <label for="price">ราคา:</label>
-                    <input type="text" id="price" name="price" placeholder="ราคา">
+                    <input type="text" id="price" name="Price" placeholder="ราคา" value="<%= stadium.Price%>">
                 </div>
                 <div class="form-group">
                     <label for="size">ขนาด:</label>
-                    <input type="text" id="size" name="size" placeholder="ขนาด">
+                    <input type="text" id="size" name="Size" placeholder="ขนาด" value="<%= stadium.Size%>">
                 </div>
                 <div class="form-group">
                     <input type="submit" value="ยืนยัน">
