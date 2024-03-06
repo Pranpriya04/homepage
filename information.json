@@ -1,13 +1,13 @@
 {
-    "UserID": 4,
-    "UserPassword": "2547",
-    "UserName": "Ice",
-    "Gender": "ชาย",
-    "Email": "Rukiju@com",
-    "Tel": "092xxxxxxx",
-    "Credit": "5555555555555555",
-    "Address": "1518 ถนนประชาราษฎร์ 1 แขวงวงศ์สว่าง เขตบางซื่อ\r\nกรุงเทพมหานคร 10800",
+    "UserID": "",
+    "UserPassword": "",
+    "UserName": "",
+    "Gender": "",
+    "Email": "",
+    "Tel": "",
+    "Credit": "",
+    "Address": "",
     "createdAt": "2024-03-06T16:35:03.353Z",
     "updatedAt": "2024-03-06T16:35:56.144Z",
-    "role": 0
+    "role": ""
 }
