@@ -22,7 +22,7 @@
                 <th>ชื่อสนาม</th>
                 <th>ขนาดสนาม</th>
                 <th>เวลาที่ลงจอง</th>
-                <th>ชื่อลูกค้า</th>
+                <th>วันที่ลงจอง</th>
                 <th>บัตรเครดิตลูกค้า</th>
                 <th>Email</th>
                 <th>เบอร์โทร</th>
@@ -36,7 +36,11 @@
                 <td><%= item.stadium?.StadiumName %></td>
                 <td><%= item.stadium?.Size %></td>
                 <td><%= item.Time %></td>
-                <td><%= user?.UserName %></td>
+                <td><%= new Date(item.SaleDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  }); %></td>
                 <td><%= user?.Credit %></td>
                 <td><%= user?.Email %></td>
                 <td><%= user?.Tel %></td>

@@ -1,5 +1,5 @@
 const express = require("express");
-const HandyStorage = require("handy-storage");
+const HandyStorage = require("handy-storage"); //เก็บข้อมูลลงjson
 const axios = require("axios");
 const path = require("path");
 const app = express();
@@ -45,6 +45,14 @@ app.get("/", async (req, res) => {
 
 app.get("/login", (req, res) => {
   res.render("login");
+});
+
+app.get("/forgetpassword",(req,res)=>{
+  res.render("forgetpassword");
+})
+
+app.get("/home_admin", (req, res) => {
+  res.render("home_admin");
 });
 
 app.get("/logout", async (req, res) => {
@@ -148,18 +156,56 @@ app.get("/forgetpassword", (req, res) => {
   res.render("forgetassword");
 });
 
+app.get("/changPassword/:UserID", (req, res) => {
+  res.render("changPassword");
+});
+
+app.post("/forget",async(req,res)=>{
+  const response = await axios.post(base_url + "/forget", req.body);
+  let {status,UserID} = response.data;
+  if (status) {
+    res.redirect("/changPassword/"+UserID);
+  } else {
+    res.render("alert",{
+      message:"ชื่อผู้ใช้งาน หรือ Email ไม่ถูกต้อง"
+    })
+  }
+})
+
+app.post("/changPassword/:UserID",async(req,res)=>{
+  if (req.body.newpassword==req.body.replypassword) {
+    const response = await axios.post(base_url + "/changPassword/"+req.params.UserID, req.body);  /** เดี๋ยวกลับมาแก้*/
+  if (response.data) {
+    res.redirect("/login");
+  } else {
+    res.render("alert",{
+      message:"ชื่อผู้ใช้งาน หรือ Email ไม่ถูกต้อง"
+    })
+  }
+  } else {
+    res.render("alert",{
+      message:"กรอกรหัสผ่านให้ถูกต้อง"
+    })
+
+  }
+  
+})
+
 app.post("/login", async (req, res) => {
   const response = await axios.post(base_url + "/login", req.body);
 
   let { status, user, role } = response.data;
 
   if (status) {
+    if (role==1) {
+      res.redirect("/home_admin");
+    }else{
+      res.redirect("/home_user");
+    }
     storage.setState({
       ...user,
       role,
     });
-
-    res.redirect("/home_user");
   } else {
     res.render("alert", {
       status: false,
