@@ -1,13 +1,13 @@
 {
-    "UserID": "",
-    "UserPassword": "",
-    "UserName": "",
-    "Gender": "",
-    "Email": "",
-    "Tel": "",
-    "Credit": "",
-    "Address": "",
-    "createdAt": "2024-03-06T16:35:03.353Z",
-    "updatedAt": "2024-03-06T16:35:56.144Z",
-    "role": ""
+    "UserID": 2,
+    "UserPassword": "04",
+    "UserName": "Opor",
+    "Gender": "หญิง",
+    "Email": "s6500@gmail.com",
+    "Tel": "091xxxxxxx",
+    "Credit": "4444444444444444",
+    "Address": "36 หมู่1 ต.เตี๋ยวเนื้อ อ.โคขุน จ.ปราจีน",
+    "createdAt": "2024-03-06T15:53:17.487Z",
+    "updatedAt": "2024-03-06T16:05:46.352Z",
+    "role": 0
 }
