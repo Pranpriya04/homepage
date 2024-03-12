@@ -25,8 +25,7 @@ storage.setState({
   role: "",
 });
 
-// const base_url = "http://10.104.15.122:3000";
-const base_url = "http://localhost:3000";
+const base_url = "http://10.104.15.122:3000";
 
 app.set("views", path.join(__dirname, "/public/views"));
 app.set("view engine", "ejs");
