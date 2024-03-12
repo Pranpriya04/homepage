@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 var bodyParser = require("body-parser");
 require("dotenv").config();
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 3002;
 
 const storage = new HandyStorage({
   beautify: true,
