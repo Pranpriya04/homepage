@@ -25,7 +25,7 @@ storage.setState({
   role: "",
 });
 
-const base_url = "http://localhost:3000";
+const base_url = "http://10.104.15.122:3000";
 
 app.set("views", path.join(__dirname, "/public/views"));
 app.set("view engine", "ejs");
@@ -51,11 +51,11 @@ app.get("/member", (req, res) => {
   res.render("member");
 });
 
-app.get("/forgetpassword",(req,res)=>{
+app.get("/forgetpassword", (req, res) => {
   res.render("forgetpassword");
-})
+});
 
-app.get("/home_admin", async(req, res) => {
+app.get("/home_admin", async (req, res) => {
   const response = await axios.get(base_url + "/stadiums");
   res.render("home_admin", {
     stadium: response.data,
@@ -63,48 +63,50 @@ app.get("/home_admin", async(req, res) => {
   });
 });
 
-app.get("/editstadium_admin/:StadiumID",async(req,res)=>{
-  const response = await axios.get(base_url + "/stadiums/"+req.params.StadiumID);
+app.get("/editstadium_admin/:StadiumID", async (req, res) => {
+  const response = await axios.get(
+    base_url + "/stadiums/" + req.params.StadiumID,
+  );
   console.log(response);
   res.render("editstadium_admin", {
     stadium: response.data,
-  })
+  });
 });
 
-app.post("/editstadium_admin/:StadiumID",async(req,res)=>{
-  const response = await axios.put(base_url + "/stadiums/"+req.params.StadiumID,req.body);
+app.post("/editstadium_admin/:StadiumID", async (req, res) => {
+  const response = await axios.put(
+    base_url + "/stadiums/" + req.params.StadiumID,
+    req.body,
+  );
   console.log(response);
-  res.redirect("/home_admin")
+  res.redirect("/home_admin");
 });
 
+app.get("/instadium_admin", (req, res) => {
+  res.render("instadium_admin");
+});
 
-app.get("/instadium_admin",(req,res)=>{
-  res.render("instadium_admin")
-})
-
-app.get("/sale-admin",async(req,res)=>{
+app.get("/sale-admin", async (req, res) => {
   const response = await axios.get(base_url + "/sales_data");
   console.log(response);
   res.render("sale-admin", {
     sales_data: response.data,
     role: 0,
   });
+});
 
-})
-
-app.get("/datamem_admin",async(req,res)=>{
+app.get("/datamem_admin", async (req, res) => {
   const response = await axios.get(base_url + "/users");
   console.log(response);
   res.render("datamem_admin", {
     users: response.data,
     role: 0,
   });
+});
 
-})
-
-app.get("/datamem_admin",(req,res)=>{
-  res.render("datamem_admin")
-})
+app.get("/datamem_admin", (req, res) => {
+  res.render("datamem_admin");
+});
 
 app.get("/logout", async (req, res) => {
   await storage.setState({
@@ -163,9 +165,9 @@ app.get("/basketball", async (req, res) => {
   let page = "home";
   const response = await axios.get(base_url + "/basketball");
   if (storage.state.UserID) {
-    if (storage.state.role==1) {
+    if (storage.state.role == 1) {
       page = "home_admin";
-    }else{
+    } else {
       page = "home_user";
     }
   }
@@ -178,9 +180,9 @@ app.get("/football", async (req, res) => {
   let page = "home";
   const response = await axios.get(base_url + "/football");
   if (storage.state.UserID) {
-    if (storage.state.role==1) {
+    if (storage.state.role == 1) {
       page = "home_admin";
-    }else{
+    } else {
       page = "home_user";
     }
   }
@@ -193,12 +195,13 @@ app.get("/futsal", async (req, res) => {
   let page = "home";
   const response = await axios.get(base_url + "/futsal");
   if (storage.state.UserID) {
-    if (storage.state.role==1) {
+    if (storage.state.role == 1) {
       page = "home_admin";
-    }else{
+    } else {
       page = "home_user";
     }
-  }  res.render(page, {
+  }
+  res.render(page, {
     stadium: response.data,
   });
 });
@@ -207,9 +210,9 @@ app.get("/Bat", async (req, res) => {
   let page = "home";
   const response = await axios.get(base_url + "/Bat");
   if (storage.state.UserID) {
-    if (storage.state.role==1) {
+    if (storage.state.role == 1) {
       page = "home_admin";
-    }else{
+    } else {
       page = "home_user";
     }
   }
@@ -231,43 +234,43 @@ app.get("/forgetpassword", (req, res) => {
 });
 
 app.get("/changPassword/:UserID", (req, res) => {
-  res.render("changPassword",{
-    UserID:req.params.UserID
+  res.render("changPassword", {
+    UserID: req.params.UserID,
   });
 });
 
-app.post("/forget",async(req,res)=>{
+app.post("/forget", async (req, res) => {
   const response = await axios.post(base_url + "/forget", req.body);
-  let {status,UserID} = response.data;
+  let { status, UserID } = response.data;
   if (status) {
-    res.redirect("changPassword/"+UserID);
+    res.redirect("changPassword/" + UserID);
   } else {
-    res.render("alert",{
-      message:"ชื่อผู้ใช้งาน หรือ Email ไม่ถูกต้อง"
-    })
+    res.render("alert", {
+      message: "ชื่อผู้ใช้งาน หรือ Email ไม่ถูกต้อง",
+    });
   }
-})
+});
 
-app.post("/changPassword/:UserID",async(req,res)=>{
-  console.log(req.params.UserID)
-  if (req.body.newpassword==req.body.replypassword) {
-    const response = await axios.post(base_url + "/changPassword/"+req.params.UserID, req.body);  /** เดี๋ยวกลับมาแก้*/
-  if (response.data) {
-    res.redirect("/login");
+app.post("/changPassword/:UserID", async (req, res) => {
+  console.log(req.params.UserID);
+  if (req.body.newpassword == req.body.replypassword) {
+    const response = await axios.post(
+      base_url + "/changPassword/" + req.params.UserID,
+      req.body,
+    ); /** เดี๋ยวกลับมาแก้*/
+    if (response.data) {
+      res.redirect("/login");
+    } else {
+      res.render("alert", {
+        message: "ชื่อผู้ใช้งาน หรือ Email ไม่ถูกต้อง",
+      });
+    }
   } else {
-    res.render("alert",{
-      message:"ชื่อผู้ใช้งาน หรือ Email ไม่ถูกต้อง"
-    })
+    res.render("alert", {
+      message: "กรอกรหัสผ่านให้ถูกต้อง",
+    });
   }
-  } else {
-    res.render("alert",{
-      message:"กรอกรหัสผ่านให้ถูกต้อง"
-    })
-
-  }
- 
-})
-
+});
 
 app.post("/login", async (req, res) => {
   const response = await axios.post(base_url + "/login", req.body);
@@ -275,9 +278,9 @@ app.post("/login", async (req, res) => {
   let { status, user, role } = response.data;
 
   if (status) {
-    if (role==1) {
+    if (role == 1) {
       res.redirect("/home_admin");
-    }else{
+    } else {
       res.redirect("/home_user");
     }
     storage.setState({
@@ -318,8 +321,8 @@ app.post("/booking", async (req, res) => {
   res.redirect("/home_user");
 });
 
-app.post("/member",async (req, res)=>{
-  if (req.body.UserPassword==req.body.nPassword) {
+app.post("/member", async (req, res) => {
+  if (req.body.UserPassword == req.body.nPassword) {
     const response = await axios.post(base_url + `/users`, req.body);
     res.redirect("/home");
   } else {
@@ -328,21 +331,21 @@ app.post("/member",async (req, res)=>{
       message: "รหัสไม่ตรง",
     });
   }
-})
-
-app.post("/instadium_admin",async (req, res)=>{
-  const response = await axios.post(base_url + `/stadiums`, req.body);
-  res.redirect("/home_admin");
-})
-
-app.get("/delstadium/:saleID", async (req, res) => {
-  const response = await axios.delete(base_url + "/stadiums/" + req.params.saleID);
-res.redirect("/home_admin")
 });
 
+app.post("/instadium_admin", async (req, res) => {
+  const response = await axios.post(base_url + `/stadiums`, req.body);
+  res.redirect("/home_admin");
+});
+
+app.get("/delstadium/:saleID", async (req, res) => {
+  const response = await axios.delete(
+    base_url + "/stadiums/" + req.params.saleID,
+  );
+  res.redirect("/home_admin");
+});
 
 //-------------------------------------------------------------------------
-
 
 app.listen(PORT, () => {
   console.log("Sever started on post 5500");
